@@ -14,20 +14,19 @@ class Verify:
 
     """Verify when password is forgotten."""
 
-    def __init__(self, email):
-        self.email = email
-
-    def generate_confirmation_token(self, expiration=3600):
+    @staticmethod
+    def generate_confirmation_token(nickname, email, expiration=3600):
         s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'confirm': self.email})
+        return s.dumps({'nickname': nickname, 'email': email})
 
-    def confirm(self, token):
+    @staticmethod
+    def confirm(token, nickname, email):
         s = Serializer(current_app.config['SECRET_KEY'])
         try:
             data = s.loads(token)
         except:
             return False
-        if data.get('confirm') != self.email:
+        if data.get('nickname') != nickname or data.get('email') != email:
             return False
         return True
 

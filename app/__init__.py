@@ -10,6 +10,9 @@ from app.rest.user.logout import LogoutApi
 from app.rest.user.register import RegisterApi
 from app.rest.email.bind_email import BindEmailApi
 from app.rest.email.confirm_email import ConfirmEmailApi
+from app.rest.password.change_password import ChangePasswordApi
+from app.rest.password.send_verify_email import SendVerifyEmailApi
+from app.rest.password.forget_password import ForgetPasswordApi
 from flask_restful import Api
 from flask_uploads import configure_uploads
 from werkzeug.datastructures import Headers
@@ -73,6 +76,18 @@ def create_app(object_name):
     rest_api.add_resource(
         ConfirmEmailApi,
         '/api/confirm_email'
+    )
+    rest_api.add_resource(
+        ChangePasswordApi,
+        '/api/change_password'
+    )
+    rest_api.add_resource(
+        SendVerifyEmailApi,
+        '/api/send_verify_email'
+    )
+    rest_api.add_resource(
+        ForgetPasswordApi,
+        '/api/forget_password'
     )
     rest_api.init_app(app)
 

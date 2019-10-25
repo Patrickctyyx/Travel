@@ -13,14 +13,11 @@ class ApiError(Exception):
         }
 
 
-class InvalidJSCode(ApiError):
+class WrongInfo(ApiError):
     errcode = 1
 
     def __init__(self, info):
-        self.msg = {
-            'msg': 'invalid js code!',
-            'detail': info
-        }
+        self.msg = '信息错误：{}!'.format(info)
 
 
 class InvalidToken(ApiError):
@@ -48,7 +45,7 @@ class ObjectNotFound(ApiError):
     errcode = 5
 
     def __init__(self, info):
-        self.msg = '对象不存在：{}'.format(info)
+        self.msg = '对象不存在：{}!'.format(info)
 
 
 class InvalidSearchType(ApiError):

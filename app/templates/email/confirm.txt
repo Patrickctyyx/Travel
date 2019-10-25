@@ -1,5 +1,3 @@
-亲爱的 {{ user.nickname }},
-
 请复制这串 token 来验证您的邮箱。
 
 {{ token }}

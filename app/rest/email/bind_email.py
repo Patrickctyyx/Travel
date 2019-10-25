@@ -26,6 +26,6 @@ class BindEmailApi(Resource):
         token = user.generate_confirmation_token().decode()
 
         send_email(email, '确认你的邮件',
-                   'email/confirm', user=user, token=token)
+                   'email/confirm', token=token)
 
-        return {'msg': '确认邮件已发送', 'verify_token': token}, 200
+        return {'msg': '确认邮件已发送'}, 200

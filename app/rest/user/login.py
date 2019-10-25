@@ -1,8 +1,7 @@
-from flask import g
 from flask_restful import Resource
 from .register_parser import register_post_parser
 from app.models import User
-from app.errors import ObjectNotFound
+from app.errors import ObjectNotFound, WrongInfo
 
 
 class LoginApi(Resource):
@@ -14,7 +13,9 @@ class LoginApi(Resource):
         if not user:
             raise ObjectNotFound('用户名不存在')
 
-        g.current_user = user
+        if not user.verify_password(args.get('password')):
+            raise WrongInfo('用户名或者密码错误')
+
         token = user.generate_auth_token().decode()
 
         return {'token': token}, 200
