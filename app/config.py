@@ -10,8 +10,13 @@ class Config:
     JSON_AS_ASCII = False
     ACCESS_TOKEN = ''
     UPLOADED_PHOTOS_DEST = os.getcwd() + '/img'
-    APPID = 'wxb29b3d8ad9b05c5a'
-    APP_SECRET = '38890f5c42abad41c1ddd4eaef18a8bb'
+    FLASK_MAIL_SUBJECT_PREFIX = '[Patrick]'
+    FLASK_MAIL_SENDER = 'Patrick <{}>'.format(os.environ.get('MAIL_USERNAME'))
+    MAIL_SERVER = 'smtp.sina.com'
+    MAIL_PORT = 25  # SSL，TLS都不要开...就是这个端口了
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    # MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_PASSWORD = 'ec3c51ababe8d311'
 
 
 class ProdConfig(Config):

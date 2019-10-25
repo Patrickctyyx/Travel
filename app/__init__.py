@@ -9,6 +9,7 @@ from app.rest.user.login import LoginApi
 from app.rest.user.logout import LogoutApi
 from app.rest.user.register import RegisterApi
 from app.rest.email.bind_email import BindEmailApi
+from app.rest.email.confirm_email import ConfirmEmailApi
 from flask_restful import Api
 from flask_uploads import configure_uploads
 from werkzeug.datastructures import Headers
@@ -68,6 +69,10 @@ def create_app(object_name):
     rest_api.add_resource(
         BindEmailApi,
         '/api/bind_email'
+    )
+    rest_api.add_resource(
+        ConfirmEmailApi,
+        '/api/confirm_email'
     )
     rest_api.init_app(app)
 

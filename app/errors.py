@@ -26,8 +26,8 @@ class InvalidJSCode(ApiError):
 class InvalidToken(ApiError):
     errcode = 2
 
-    def __init__(self):
-        self.msg = '无效的 token'
+    def __init__(self, info='token'):
+        self.msg = '无效的 {}!'.format(info)
 
 
 class LackOfInfo(ApiError):
