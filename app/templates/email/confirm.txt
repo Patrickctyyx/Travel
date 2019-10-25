@@ -1,0 +1,13 @@
+亲爱的 {{ user.nickname }},
+
+请复制这串 token 来验证您的邮箱。
+
+{{ token }}
+
+在个人中心中通过 token 来验证。
+
+Sincerely,
+
+Patrick
+
+注意：这个邮箱的回复邮件不会被监测。
