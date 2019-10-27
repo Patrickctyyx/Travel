@@ -16,7 +16,10 @@ class RegisterApi(Resource):
         else:
             user = User(
                 nickname=args.get('nickname'),
-                password=args.get('password')
+                password=args.get('password'),
+                sex=args.get('sex'),
+                birth_date=args.get('birth_date'),
+                hobby=args.get('hobby')
             )
 
         db.session.add(user)

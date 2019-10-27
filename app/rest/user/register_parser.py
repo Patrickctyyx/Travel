@@ -12,3 +12,18 @@ register_post_parser.add_argument(
     type=password_type,
     required=True
 )
+register_post_parser.add_argument(
+    'sex',
+    type=str,
+    required=True
+)
+register_post_parser.add_argument(
+    'birth_date',
+    type=str,
+    required=False
+)
+register_post_parser.add_argument(
+    'hobby',
+    type=str,
+    required=False
+)
