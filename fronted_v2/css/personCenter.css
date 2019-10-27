@@ -1,0 +1,222 @@
+html,body{margin:0;border:0;padding:0;width:100%;font-size:14px;font-family: Arial,"微软雅黑","宋体"; background:#E6D4C0; color:#333333; line-height:27px}
+img {border:0px; }
+*{ padding:0; margin:0}
+ul,li,dl,dd,dt,span{ margin:0; padding:0;}
+li { list-style:none;}
+a {text-decoration:none;color:#E6D4C0; } 
+a:hover { text-decoration:none; outline-style: none;}
+/* h3{color: #E6D4C0;} */
+.people_container{
+	margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 1100px;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.people_left{/*整体的*/
+	width: 250px;
+	height: 650px;
+	float: left;
+	background-color: indianred;
+}
+.people_left_top{
+	width: 250px;
+	height: 180px;
+	display: inline-block;
+	text-align: center;
+	box-shadow: 0 2px 4px #ccc;
+}
+.people_left_top img{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin-top:20px;
+	margin-bottom: 10px;
+}
+.people_left_top span{
+	color: #E6D4C0;
+	font-size: 22px;
+}
+.people_left_foot{
+	width: 100%;
+	height: 470px;
+	box-shadow: 0 2px 4px #ccc;
+}
+.left_foot_top{
+	width: 100%;
+	height: 70px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+.left_foot_top:after{
+	content: "";
+	display: block;
+	width: 200px;
+	height: 1px;
+	background: #b9b9b9 none repeat scroll 0 0;
+}
+.left_foot_foot{
+	width: 100%;
+	height: 400px;
+	cursor: pointer;
+}
+.left_foot_li{
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto;
+	height: 64px;
+	line-height: 64px;
+	font-size: 18px;
+	color: #E6D4C0;
+	padding-left: 10px;
+	cursor: default;
+	outline: 0;
+	border-bottom:1px solid rgba(208, 207, 207, 0.47);
+}
+.left_foot_li_a span{
+	float: right;
+	padding-right: 20px;
+}
+.left_foot_li:hover .left_foot_li_a{
+	color: #E6D4C0;
+}
+.left_foot_foot .left_foot_li:nth-child(1) a{
+	color: #fff;
+	font-size: 20px;
+}
+.people_right{
+	width: 830px;
+	display:inline-block;
+	float: left;
+	position: absolute;
+	left: 260px;
+	top: 0px;
+	height: 650px; 
+	background-color: #fff; 
+	display: none;
+	padding: 0 20px;
+}
+.left_foot_foot .left_foot_li:nth-child(1) .people_right{
+	display: block;
+}
+/*个人信息*/
+.people_message{
+	width: 830px;
+	height: auto;
+}
+.right_top{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	border-bottom: 1px solid #ddd;
+}
+.people_message span{
+	font-size: 18px;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}
+.people_message span:hover{
+	cursor: pointer;
+	color: #08acee;
+}
+.right_content{
+	width: 100%;
+	position: absolute;
+	top: 100px;
+	padding-left: 40px;
+}
+.right_content dl{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start;/*起点对齐*/
+}
+.right_content dt,.right_content dd{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+	font-size: 18px;
+	/*border: 1px solid red;*/
+}
+.right_content dt{
+	width: 100px;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 15px;
+}
+.right_content dd{
+	width: 500px;
+	border-bottom: 1px solid #ddd;
+}
+.people_info img{
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-right: 50px;
+}
+.right_top1{
+	width: 450px;
+	height: 550px;
+	display: inline-block;
+	position: absolute;
+	top:80px;
+	left: 200px;
+}
+.info{
+	width: 100%;
+	display: inline-block;
+}
+.info span{
+	color: indianred;
+}
+.info input:focus{
+	border-color: indianred;
+	outline-color: indianred;
+}
+.okk,.ook{
+	width:80px;
+	height: 40px;
+	background-color: indianred;
+	color: #fff;
+	float: right;	
+}
+.okk{
+	display: none;
+}
+.ook{
+	margin-left: 40px;
+}
+input[type=text],input[type=password]{ 
+	border: 1px solid #DCDEE0; 
+	border-radius: 3px; 
+	height: 50px; 
+	padding: 0px 16px; 
+	font-size: 16px; 
+	width:75%;
+	float: right;
+	margin-bottom: 15px;
+	line-height:50px; 
+	color:#888;
+}
+.right_top1 input[type=text]:disabled,.right_top1 input[type=password]:disabled{
+	background-color: #fff;
+	cursor: text;
+}
+.right_top2{
+	width: 800px;
+	height: 550px;
+	
+	
+}
+.right_top2 span{
+	font-size: 28px;
+	color: indianred;
+	position: absolute;
+	top:280px;
+	left: 380px;
+}

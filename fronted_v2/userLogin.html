@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width,initial-scal=1"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>用户登录</title>
+	<link rel="stylesheet" type="text/css" href="css/userLogin.css">
+  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="js/loginCheck.js"></script>
+</head>
+<body>
+    <div class="contain">
+        <div class="login_box">
+            <div class="img-one"><img src="imgs/logo1.png" /></div>
+            <div class="login">
+                <div class="login_name">
+                    <p>用户登录</p>
+                </div>
+                <form method="post" action="" onsubmit="return logincheck()">
+                  <input name="username" type="text"  placeholder="请输入用户名" >
+                  <input name="password" type="password" placeholder="请输入密码" />
+                  <input value="登录" class="denglu">
+                </form>
+                <div class="login_last">
+                  <a href="forget.html">忘记密码？</a>&nbsp;
+                  <a href="userRegist.html">注册新用户</a>
+                </div>                
+            </div>
+       </div>
+        <footer class="login_foot">
+          <p>本网站版权软件测试小组所有，未经许可，不得转载。</p>
+        </footer>
+    </div>
+
+</body>
+</html>

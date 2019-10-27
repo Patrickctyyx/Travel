@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>红色记忆</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  
+</head>
+<body>
+  <div class="main_contain">
+      <!-- 导航栏 -->
+      <nav>
+          <div class="topbg">
+  			<div class="topone">
+    			<div class="logo"><img src="imgs/logo1.png" width="231" height="auto"  /></div>
+     			 <div class="nav">
+     				 <ul>
+        				<li class="nav_menu_li"><a href="index.html" class="hover" target="main_choice" style="color: #fff;">网站首页</a></li>
+        				<li class="nav_menu_li"><a href="#" target="main_choice">景点介绍</a></li>
+        				<li class="nav_menu_li"><a href="#" target="main_choice">游玩知识</a></li>
+        				<li class="nav_menu_li"><a href="memory.html" target="main_choice">红色记忆</a></li>
+        				<li class="nav_menu_li"><a href="leavenote.html" target="main_choice">游客留言</a></li>
+                <!--  登陆注册按钮 -->
+        				<!-- <li style="float: right;"><a href="userLogin.html">登录</a></li>
+                <li style="float: right;"><a href="userRegist.html">注册</a></li> -->
+                <!-- 登陆成功后的按钮 -->
+                <li class="nav_menu_more" style="float:right;">
+                    <img src="imgs/nav_user.png">
+                    <ul class="more_view">
+                        <li><a href="personCenter.html" target="main_choice">个人中心</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+      				</ul></div>
+    		</div>
+  		  </div>
+      </nav>
+    <div class="main_middle">          
+          <div>
+              <iframe  src="index.html" name="main_choice" scrolling="yes" frameborder="0" ></iframe>
+          </div>
+    </div>
+
+  </div>
+<script type="text/javascript">
+    $('.nav_menu_li').click(function(){        
+         $('.nav_menu_li').children("a").css({"background":"#E6D4C0","color":"black"});
+         $(this).children("a").css({"background":"indianred","color":"#fff"});
+    });
+    function autoHeight(iframe) {
+        if (iframe) {
+            var iframeWin = iframe.contentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight;
+                iframe.width = document.documentElement.clientWidth;
+            }
+        }
+    }
+    function changeFrame() {
+        var f = document.getElementById("myiframe");
+        autoHeight(f);
+    }
+    window.onresize = function () {
+        changeFrame();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>People</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter.css">
+</head>
+<body>
+	<div class="people_container">
+		<div class="people_left">
+			<div class="people_left_top">
+				<a href="#" title="点击更换头像"><img src="imgs/nav_user.jpg" class="img-thumbnail img-circle"></a><br>
+				<span>包子_</span>
+			</div>
+			<div class="people_left_foot">
+				<div class="left_foot_top">
+					<h3>动态圈</h3>
+				</div>
+				<div class="left_foot_foot">
+					<ul>
+						<li class="left_foot_li">
+							<a href="#" class="left_foot_li_a">基本信息<span>&gt;</span></a>
+							<div class="people_right people_info">
+								<div class="right_top"><h3>我的信息<a href="#" class="exchange"><img src="imgs/change.png"></a></h3></div>
+								<div class="right_top1">
+									<form method="post" action="">
+										<div class="info"><span>用户名：</span><input type="text" disabled="disabled" placeholder="包子_" ></div>
+										<div class="info"><span>性别：</span><input type="text" disabled="disabled" placeholder="女" /></div>                 				
+										<div class="info"><span>邮箱：</span><input name="email" type="text" disabled="disabled" placeholder="advancesoft@163.com" /></div>
+										<div class="info"><span>出生年月：</span><input type="text" disabled="disabled" placeholder="1997" /></div>
+										<div class="info"><span>兴趣爱好：</span><input type="text" disabled="disabled" placeholder="玩耍" /></div>
+										<div class="info"><span>密码：</span><input type="password" disabled="disabled" placeholder="密码" /></div>
+										<div class="info"><input type="submit" value="提交" class="btn btn-default okk" /></div>
+                					</form>
+								</div>
+							</div>
+						</li>
+						<li class="left_foot_li">
+							<a href="#" class="left_foot_li_a">绑定邮箱<span>&gt;</span></a>
+							<div class="people_right people_email">
+								<div class="right_top"><h3>绑定邮箱</h3></div>
+								<div class="right_top1">
+									<form method="post" action="">
+										<div class="info"><span>邮箱：</span><input type="text" /></div>      
+										<div class="info"><span>Token：</span><input type="text"  /></div>
+										<div class="info"><input type="button" value="提交" class="btn btn-default ook" /><input type="button" value="获取token" class="btn btn-default ook" /></div>
+                					</form>
+								</div>
+							</div>
+						</li>
+						<li class="left_foot_li">
+							<a href="#" class="left_foot_li_a">更多...<span>&gt;</span></a>
+							<div class="people_right people_collect">
+								<div class="right_top"><h3>更多</h3></div>
+								<div class="right_top2"><span>敬请期待！</span></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	$('a').click(function(){
+		$('a').css("text-decoration","none");
+	});
+	$('.exchange').click(function(){
+		alert("修改基本信息！");
+		$('.info').children('input').attr("disabled",false);
+		$(".info").find("input[name=email]").attr({"title":"邮箱不可更改，请前去绑定邮箱。","disabled":true});
+		$('.okk').css("display","block");
+	});
+	$('.okk').click(function(){
+		alert("提交成功");
+	});
+	$('.left_foot_li').click(function(){  //让导航栏高亮显示      
+         $('.left_foot_li').children(".people_right").css("display","none");
+         $('.left_foot_li').children(".left_foot_li_a").css({"color":"#E6D4C0","font-size":"18px"});
+         $(this).children(".left_foot_li_a").css({"color":"#fff","font-size":"20px"});
+         $(this).children(".people_right").css("display","block");
+	});
+</script>
+</body>
+</html>

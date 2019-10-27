@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scal=1">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="css/userLogin.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/loginCheck.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+</head>
+<body>
+    <div class="contain">
+	   <div class="login_box" >
+      <div class="img-two"><img src="imgs/logo1.png" /></div>
+      <div class="regist">
+          <div class="login_name">
+               <p>用户注册</p>
+          </div>
+          <form name="inputForm">
+               <span>用户名：</span><input name="name" type="text"  placeholder="请添加用户名" ><label id="name" class="error">用户名不能为空</label><br>
+               <div class="regist_radio">
+                  <span>性别：</span><input type="radio" name="sex" value="1" class="boy"><span>男</span> 
+                  <input type="radio" name="sex" value="0" class="girl" checked="checked"><span>女</span> 
+               </div><br>
+              <span> 密码：</span><input name="pwd" type="password" placeholder="请添加九到十六位有效密码" /><label id="pwd" class="error">密码不能为空</label><br>
+              <span> 重输密码：</span><input name="repwd" type="password" placeholder="请再次确认密码" /><label id="repwd" class="error">两次输入不一致</label><br>
+               <span>出生年月：</span><input name="day" type="text"  placeholder="请添加出生年月YYYY-MM(选填)" ><br><label id="day" class="error">出生年月格式应为YYYY-MM</label><br>
+               <span>兴趣爱好：</span><input name="hobby" type="text"  placeholder="请添加兴趣爱好(选填)" >
+               <input value="注册" class="zhuce" onclick="registerHandler()">
+          </form>
+          <div class="regist_last">
+          		<a href="#" onclick="alert('请及时联系管理员报告在注册新账户时遇到的问题，寻找解决方案。管理员邮箱：457819238@qq.com管理员电话：15927178524')">注册遇到问题？</a>
+          </div>
+      </div>
+	   </div>
+    <div class="regist_foot">
+    	<p>本网站版权归软件测试小组所有，未经许可，不得转载。</p>
+    </div>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{margin:0; padding:0;}
+body,html{background-color: #E6D4C0;}
+body,input{font-size:14px; line-height:24px; color:#333; font-family:Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;}
+h1{margin-bottom:15px; height:100px; line-height:100px; text-align:center; font-size:24px; color:#fff; background:black;}
+#content #post,#comment p{zoom:1;}
+#content #post:after,#comment p:after{display:block; height:0; clear:both; visibility:hidden; overflow:hidden; content:'.';}
+.transition{-webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -o-transition:all 0.5s linear; -ms-transition:all 0.5s linear; transition:all 0.5s linear;}
+.transition{font-size: 18px; }
+#content{margin:0 auto; width:960px; overflow:hidden;padding-top: 30px;}
+#content #post{margin-bottom:15px; padding-bottom:15px; border-bottom:1px #d4d4d4 dashed;
+	   height: 556px;
+   }
+#content #post textarea{display:block; margin-bottom:10px; padding:5px; width:948px; height:390px; border:1px #d1d1d1 solid; border-radius:5px; resize:none; outline:none;}
+#content #post textarea:hover{border:1px #FFA488 solid;}
+#content #post #postBt,#content #post #clearBt{margin-left:5px; padding:3px; float:right;}
+#comment{overflow:hidden;}
+#comment p{margin-bottom:10px; padding:10px; border-radius:5px;}
+#comment p:nth-child(odd){border:1px solid #FFA488; background:#ffd;}
+#comment p:nth-child(even){border:1px solid #FFA488; background:#f2fddb;}
+/*#comment p span{display:inline; float:left;}*/
+#comment p .right{text-align:right;}
+#comment p .msg{width:738px;}
+#comment p .datetime{width:200px; color:#999; text-align:right;}
+.notename{background:indianred ;height:50px;line-height: 50px;font-size: 20px;padding-left: 20px;}
+.notename input[type="submit"],.notename input[type="text"]{border:none; background-color:indianred; color:white;font-size: 16px;margin:0 20px;}
+#postBt{border:none; background-color:indianred; color:white;border-radius:5px; width:80px; height:40px;}

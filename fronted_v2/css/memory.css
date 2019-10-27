@@ -1,0 +1,39 @@
+html,body{margin:0;border:0;padding:0;width:100%;font-size:14px;font-family: Arial,"微软雅黑","宋体"; background:#E6D4C0; color:#333333; line-height:27px}
+img {border:0px; }
+*{ padding:0; margin:0}
+ul,li,dl,dd,dt,span{ margin:0; padding:0;}
+li { list-style:none;}
+a {text-decoration:none;color:#333; } 
+a:hover { text-decoration:none; color:#e9002e}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    background-color: rgba(25, 100, 100, 0.1);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    background-color: rgba(50, 100, 100, 0.2);
+}
+.container{width: 1875px;height: auto;box-sizing: border-box;}
+.top{width:95%; margin:0 auto;}
+.top video{width: 100%;height: auto;}
+.top1{width: 80%;margin: 0 auto;text-align: center;}
+.top1 img{width: 1002px;height: 200px;margin:50px 0;}
+.top2{width: 100%;height: 523px;background-color: #923823;}
+.top2 .top2-one{width: 100%;height: 200px;line-height: 200px;text-align: center;font-family: "STKaiti";font-size: 60px;color: #E6D4C0;}
+.top2 .top2-two{width: 1135px;height: 300px;line-height: 300px;margin:0 auto;}
+.top2 .top2-two li{display: inline-block;width: 207px;height: 266px;}
+.top3{width: 80%;height: auto;margin:0 auto;text-align: center;margin-top: 20px;}
+.top3 .top3-two li{display: inline-block;width: 300px;height: 220px;margin:20px 50px;}
+.top3 .top3-three1{width: 100%;height: 100px;margin-top: 50px;line-height: 100px;text-align: left;font-family: "STKaiti";font-size: 50px;color: #923823;}
+.top3 .top3-three2-one{display: inline-block;margin:30px 50px;width: 320px;height: 280px;background-color:#923823;box-shadow: darkgrey 10px 10px 30px 5px ;-webkit-box-shadow: darkgrey 10px 10px 30px 5px ;-moz-box-shadow: darkgrey 10px 10px 30px 5px ;}
+.top3 .top3-three2-one a{font-size: 18px;font-family: "YouYuan";color: white;}
+.top3 .top3-three2-one a:hover{color: #E6D4C0;}
+.top4{width: 100%;height: 630px;background-image: url(../imgs/bg.jpg);margin-top: 50px;}
+.top4 .top4-one{width: 1078px;height: 350px;position: absolute;margin-top: 200px;margin-left: 380px;background-image: url(../imgs/bg1.png);}
+.top4 .top4-one ul{width: 1017px;height: 280px;margin-left: 30px;margin-top: 50px;}
+.top4 .top4-one li{width: 490px;height: 40px;display: inline-block;line-height: 40px;margin-left: 10px;font-size: 15px;}
