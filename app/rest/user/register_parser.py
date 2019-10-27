@@ -27,3 +27,15 @@ register_post_parser.add_argument(
     type=str,
     required=False
 )
+
+login_post_parser = reqparse.RequestParser()
+login_post_parser.add_argument(
+    'nickname',
+    type=str,
+    required=True
+)
+login_post_parser.add_argument(
+    'password',
+    type=password_type,
+    required=True
+)

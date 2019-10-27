@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from .register_parser import register_post_parser
+from .register_parser import login_post_parser
 from app.models import User
 from app.errors import ObjectNotFound, WrongInfo
 
@@ -7,7 +7,7 @@ from app.errors import ObjectNotFound, WrongInfo
 class LoginApi(Resource):
 
     def post(self):
-        args = register_post_parser.parse_args()
+        args = login_post_parser.parse_args()
 
         user = User.query.filter_by(nickname=args.get('nickname')).first()
         if not user:

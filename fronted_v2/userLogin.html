@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/userLogin.css">
   <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
   <script type="text/javascript" src="js/loginCheck.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
 </head>
 <body>
     <div class="contain">
@@ -17,10 +18,10 @@
                 <div class="login_name">
                     <p>用户登录</p>
                 </div>
-                <form method="post" action="" onsubmit="return logincheck()">
+                <form>
                   <input name="username" type="text"  placeholder="请输入用户名" >
                   <input name="password" type="password" placeholder="请输入密码" />
-                  <input value="登录" class="denglu">
+                  <input value="登录" class="denglu" onclick="loginHandler()">
                 </form>
                 <div class="login_last">
                   <a href="forget.html">忘记密码？</a>&nbsp;
