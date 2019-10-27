@@ -28,4 +28,4 @@ class BindEmailApi(Resource):
         send_email(email, '确认你的邮件',
                    'email/confirm', token=token)
 
-        return {'msg': '确认邮件已发送'}, 200
+        return {'message': '确认邮件已发送'}, 200

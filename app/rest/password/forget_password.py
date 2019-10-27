@@ -25,6 +25,6 @@ class ForgetPasswordApi(Resource):
             user.password = args['new_password']
             db.session.add(user)
             db.session.commit()
-            return {'msg': '密码重置成功'}, 200
+            return {'message': '密码重置成功'}, 200
         else:
             raise InvalidToken('verify token')

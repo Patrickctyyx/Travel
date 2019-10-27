@@ -36,4 +36,4 @@ class ChangePasswordApi(Resource):
         db.session.add(user)
         db.session.commit()
 
-        return {'msg': 'ok'}, 200
+        return {'message': 'ok'}, 200

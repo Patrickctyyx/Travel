@@ -47,7 +47,7 @@ class CommentApi(Resource):
         db.session.add(comment)
         db.session.commit()
 
-        return {'msg': 'ok'}, 200
+        return {'message': 'ok'}, 200
 
     def delete(self, comment_id=None):
 
@@ -66,4 +66,4 @@ class CommentApi(Resource):
         db.session.delete(comment)
         db.session.commit()
 
-        return {'msg': 'ok'}, 200
+        return {'message': 'ok'}, 200

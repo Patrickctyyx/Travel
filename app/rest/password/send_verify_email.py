@@ -25,4 +25,4 @@ class SendVerifyEmailApi(Resource):
         send_email(args['email'], '查收重置密码的 token',
                    'email/confirm', token=verify_token)
 
-        return {'msg': '邮件已发送'}, 200
+        return {'message': '邮件已发送'}, 200

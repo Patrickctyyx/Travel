@@ -28,4 +28,4 @@ class LogoutApi(Resource):
 
         g.current_user = None
 
-        return {'msg': 'ok'}, 200
+        return {'message': 'ok'}, 200

@@ -34,4 +34,4 @@ class AvatarApi(Resource):
             db.session.add(user)
             db.session.commit(user)
 
-            return {'msg': 'ok'}, 200
+            return {'message': 'ok'}, 200

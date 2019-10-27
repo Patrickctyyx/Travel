@@ -9,7 +9,7 @@ class ApiError(Exception):
     def data(self):
         return {
             'errcode': self.errcode,
-            'msg': self.msg
+            'message': self.msg
         }
 
 

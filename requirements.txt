@@ -9,6 +9,7 @@ Flask-RESTful
 Flask-Script
 Flask-SQLAlchemy
 Flask-Uploads
+Flask-Mail
 idna
 itsdangerous
 Jinja2
