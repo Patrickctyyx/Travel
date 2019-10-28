@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>红色记忆</title>
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
   <div class="main_contain">
@@ -19,8 +18,7 @@
      			 <div class="nav">
      				 <ul>
         				<li class="nav_menu_li"><a href="index.html" class="hover" target="main_choice" style="color: #fff;">网站首页</a></li>
-        				<li class="nav_menu_li"><a href="#" target="main_choice">景点介绍</a></li>
-        				<li class="nav_menu_li"><a href="#" target="main_choice">游玩知识</a></li>
+        				<li class="nav_menu_li"><a href="total.html" target="main_choice">景点介绍</a></li>
         				<li class="nav_menu_li"><a href="memory.html" target="main_choice">红色记忆</a></li>
         				<li class="nav_menu_li"><a href="leavenote.html" target="main_choice">游客留言</a></li>
                         <!--  登陆注册按钮 -->
@@ -28,7 +26,7 @@
                         <li class="nav_menu_li" style="float: right;" id="registerBtn"><a href="userRegist.html">注册</a></li>
                         <!-- 登陆成功后的按钮 -->
                         <li class="nav_menu_more" style="float:right; display: none" id="userBlock">
-                            <img src="imgs/nav_user.png">
+                            <img src="imgs/nav_user.png" id="userAvatar" style="border-radius: 50%">
                             <ul class="more_view">
                                 <li><a href="personCenter.html" target="main_choice">个人中心</a></li>
                                 <li><a onclick="logoutHandler()">退出登录</a></li>

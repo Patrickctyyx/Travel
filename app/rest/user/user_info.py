@@ -16,7 +16,11 @@ class UserInfoApi(Resource):
         result = dict()
         result['id'] = user.id
         result['nickname'] = user.nickname
+        result['email'] = user.email
         result['avatar_url'] = user.avatar_url
+        result['sex'] = user.sex
+        result['birth_date'] = user.birth_date
+        result['hobby'] = user.hobby
 
         return result, 200
 
@@ -36,6 +40,10 @@ class UserInfoApi(Resource):
         result = dict()
         result['id'] = user.id
         result['nickname'] = user.nickname
+        result['email'] = user.email
         result['avatar_url'] = user.avatar_url
+        result['sex'] = user.sex
+        result['birth_date'] = user.birth_date
+        result['hobby'] = user.hobby
 
         return result, 200

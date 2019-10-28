@@ -119,5 +119,45 @@ function homepageLoaded() {
         $("#loginBtn").css('display', 'none');
         $("#registerBtn").css('display', 'none');
         $("#userBlock").css('display', 'inline-block');
+        const avatar_url = localStorage.getItem('avatar_url');
+        if (avatar_url != null) {
+            $('#userAvatar').attr('src', avatar_url)
+        }
+    }
+}
+
+
+function personalPageLoaded() {
+    const token = localStorage.getItem('token');
+    if (token == null) {
+        alert('请先登录');
+        window.location.href="homepage.html";
+    }
+    else {
+        $.ajax(
+            url + "api/user_info", {
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                token: token
+            },
+            success: function(data) {
+                console.log(data);
+                localStorage.setItem('avatar_url', data.avatar_url);
+                localStorage.setItem('nickname', data.nickname);
+                $("#avatarAndName").children("a").children("img").attr('src', data.avatar_url);
+                $("#avatarAndName").children("span").text(data.nickname);
+                $("#detailInfo").children("div").children('input:eq(0)').attr('placeholder', data.nickname);
+                $("#detailInfo").children("div").children('input:eq(1)').attr('placeholder', data.sex);
+                $("#detailInfo").children("div").children('input:eq(2)').attr('placeholder', data.email);
+                $("#detailInfo").children("div").children('input:eq(3)').attr('placeholder', data.birth_date);
+                $("#detailInfo").children("div").children('input:eq(4)').attr('placeholder', data.hobby);
+            },
+            error: function (error) {
+                const resData = error.responseJSON.message;
+                alert(JSON.stringify(resData));
+                console.log(error);
+            }
+        });
     }
 }

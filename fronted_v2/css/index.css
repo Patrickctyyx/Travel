@@ -62,7 +62,7 @@ a:hover { text-decoration:none; color:#e9002e}
 .footbg{ background:indianred;}
 .foot{width:1211px; margin:0 auto; padding:15px 0;color:#dedede}
 .foot a{color:#dedede }
-.foot img:{width: 98px;height: 98px;}
+.foot img{width: 98px;height: 98px;}
 /*幻灯片(组件)*/
 .banner{height:680px;}
 .banner .ban_c img{position:absolute;width:1920px;left:50%;margin-left:-960px;top:0;}
@@ -88,17 +88,18 @@ a:hover { text-decoration:none; color:#e9002e}
 .wuhan-right{width: 25%;height: 100%;display: inline-block;}
 .wuhan-right img{width: 100%;height: 100%;}
 /* 景点墙 */
-.sceneWall{width: 100%;height: 500px;}
+.sceneWall{width: 100%;height: 500px;background-color: #fff;padding:20px 0;}
 .sceneWall-left{width: 29%;height: 100%;float: left;}
 .sceneWall-left img{width: 100%;height: 100%;}
-.sceneWall-right{width: 69%;height: 100%;border: 1px solid blue;float: right;}
+.sceneWall-right{width: 69%;height: 98%;float: left;}
 /* 路径推荐 */
 .root{width: 100%;height: 600px;display: flex;padding:20px 0;}
-.root-left{width: 19%;height: 100%;display: inline-block;padding-left:50px;padding-top: 30px;padding-right: 10px;}
+.root-left{width: 18%;height: 100%;display: inline-block;padding-left:50px;padding-top: 30px;padding-right: 10px;}
 .root-left ul{padding-left: 25px;}
 .root-left ul li{width: 100%;list-style: circle;line-height: 40px;font-size: 20px;font-family: "STKaiti";}
 .root-middle{width: 20%;height: 100%;display: inline-block;padding-top: 25px;}
-.root-middle ul{padding-left: 30px;}
+.root-middle img{padding-left: 50px;}
+.root-middle ul{padding-left: 80px;}
 .root-middle ul li{width: 100%;list-style: disc;line-height: 40px;font-size: 20px;font-family: "STKaiti";}
 .root-right{width: 60%;height: 100%;display: inline-block;}
 .introduce{width: 500px;margin-left:70px;margin-top: 50px;font-size: 18px;font-family: "STKaiti";}
