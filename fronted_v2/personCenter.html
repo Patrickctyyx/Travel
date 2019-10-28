@@ -29,12 +29,17 @@
 								<div class="right_top"><h3>我的信息<a href="#" class="exchange"><img src="imgs/change.png"></a></h3></div>
 								<div class="right_top1">
 									<form id="detailInfo">
-										<div class="info"><span>用户名：</span><input type="text" disabled="disabled" placeholder="包子_" ></div>
-										<div class="info"><span>性别：</span><input type="text" disabled="disabled" placeholder="女" /></div>                 				
-										<div class="info"><span>邮箱：</span><input name="email" type="text" disabled="disabled" placeholder="advancesoft@163.com" /></div>
-										<div class="info"><span>出生年月：</span><input type="text" disabled="disabled" placeholder="1997" /></div>
-										<div class="info"><span>兴趣爱好：</span><input type="text" disabled="disabled" placeholder="玩耍" /></div>
-										<div class="info"><input value="提交" class="btn btn-default okk" /></div>
+										<div class="info"><span>用户名：</span><input type="text" name="nickname" disabled="disabled" placeholder="包子_" ></div>
+                                        <div class="info"><span>性别：</span>
+                                            <input type="radio" name="sex" value="1" class="boy" style="margin-left: 70px"  disabled="disabled" ><span>男</span>
+                                            <input type="radio" name="sex" value="0" class="girl" checked="checked" style="margin-left: 50px" disabled="disabled"><span>女</span>
+                                        </div>
+                                        <div class="info"><span>邮箱：</span><input name="email" type="text" disabled="disabled" /></div>
+										<div class="info">
+                                            <span>出生年月：</span><input name="birth_date" type="text" disabled="disabled" placeholder="请添加出生年月YYYY-MM(选填)" />
+                                        </div>
+										<div class="info"><span>兴趣爱好：</span><input name="hobby" type="text" disabled="disabled" placeholder="请填写兴趣爱好" /></div>
+										<div class="info"><input value="提交" class="btn btn-default okk" onclick="userInfoHandler()" /></div>
                 					</form>
 								</div>
 							</div>
@@ -59,7 +64,7 @@
 								<div class="right_top1">
 									<form method="post" action="">
 										<div class="info"><span>原始密码：</span><input type="text" /></div>
-										<div class="info"><span>新密码：</span><input type="text" placeholder="请输入八位有效密码" /></div>
+										<div class="info"><span>新密码：</span><input type="text" placeholder="请输入九到十六位有效密码" /></div>
 										<div class="info"><span>确认新密码：</span><input type="text" placeholder="请再次确认新密码" /></div>
 										<div class="info"><span>Token：</span><input type="text"  /></div>
 										<div class="info"><input type="button" value="提交" class="btn btn-default ook" /><input type="button" value="获取token" class="btn btn-default ook" /></div>
@@ -81,17 +86,24 @@
 	</div>
 <script>
     personalPageLoaded();
+    let revising = false;
 	$('a').click(function(){
 		$('a').css("text-decoration","none");
 	});
 	$('.exchange').click(function(){
-		alert("修改基本信息！");
-		$('.info').children('input').attr("disabled",false);
-		$(".info").find("input[name=email]").attr({"title":"邮箱不可更改，请前去绑定邮箱。","disabled":true});
-		$('.okk').css("display","block");
-	});
-	$('.okk').click(function(){
-		alert("提交成功");
+	    if (revising) {
+	        revising = false;
+	        $('.info').children('input').attr("disabled", true);
+            $('.okk').css("display", 'none');
+        }
+	    else {
+	        revising = true;
+	        alert("修改基本信息！");
+            $('.info').children('input').attr("disabled",false);
+            $(".info").find("input[name=nickname]").attr({"title":"用户名不可更改。","disabled":true});
+            $(".info").find("input[name=email]").attr({"title":"邮箱不可更改，请前去绑定邮箱。","disabled":true});
+            $('.okk').css("display","block");
+        }
 	});
 	$('.left_foot_li').click(function(){  //让导航栏高亮显示      
          $('.left_foot_li').children(".people_right").css("display","none");

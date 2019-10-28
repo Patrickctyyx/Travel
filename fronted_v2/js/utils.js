@@ -128,7 +128,7 @@ function homepageLoaded() {
 
 
 function personalPageLoaded() {
-    const token = localStorage.getItem('token');
+	const token = localStorage.getItem('token');
     if (token == null) {
         alert('请先登录');
         window.location.href="homepage.html";
@@ -142,16 +142,72 @@ function personalPageLoaded() {
                 token: token
             },
             success: function(data) {
-                console.log(data);
+                // console.log(data);
                 localStorage.setItem('avatar_url', data.avatar_url);
                 localStorage.setItem('nickname', data.nickname);
                 $("#avatarAndName").children("a").children("img").attr('src', data.avatar_url);
                 $("#avatarAndName").children("span").text(data.nickname);
-                $("#detailInfo").children("div").children('input:eq(0)').attr('placeholder', data.nickname);
-                $("#detailInfo").children("div").children('input:eq(1)').attr('placeholder', data.sex);
-                $("#detailInfo").children("div").children('input:eq(2)').attr('placeholder', data.email);
-                $("#detailInfo").children("div").children('input:eq(3)').attr('placeholder', data.birth_date);
-                $("#detailInfo").children("div").children('input:eq(4)').attr('placeholder', data.hobby);
+                $("#detailInfo").children("div").children('input:eq(0)').attr('value', data.nickname);
+                if (data.sex === '男') {
+                    $("input[name=sex].boy").attr('checked', 'checked');
+                    $("input[name=sex].girl").removeAttr('checked');
+                }
+                else {
+                    $("input[name=sex].girl").attr('checked', 'checked');
+                    $("input[name=sex].boy").removeAttr('checked');
+                }
+                $("#detailInfo").children("div").children('input:eq(1)').attr('value', data.sex);
+                $("#detailInfo").children("div").children('input:eq(3)').attr('value', data.email);
+                $("#detailInfo").children("div").children('input:eq(4)').attr('value', data.birth_date);
+                $("#detailInfo").children("div").children('input:eq(5)').attr('value', data.hobby);
+            },
+            error: function (error) {
+                const resData = error.responseJSON.message;
+                alert(JSON.stringify(resData));
+                console.log(error);
+            }
+        });
+    }
+}
+
+
+function userInfoHandler() {
+    const sex = $("input[name=sex]:checked").val().replace(/(^\s*)|(\s*$)/g, '');
+    let ssex;
+    if (sex == 0) {
+        ssex = '女';
+    }
+    else {
+        ssex = '男';
+    }
+    const hobby = $("input[name=hobby]").val().replace(/(^\s*)|(\s*$)/g, '');
+    const birthDate = $("input[name=birth_date]").val().replace(/(^\s*)|(\s*$)/g, '');
+    if (birthDate !== '' && birthDate !== undefined) {
+		if (!birthDate.match(/^[0-9]{4}-[0-9]{1,2}$/)) {
+			$("input[name=birth_date]").focus();
+			alert("出生年月格式应为YYYY-MM");
+			return false;
+		}
+	}
+    const token = localStorage.getItem('token');
+    if (token == null) {
+        alert('请先登录');
+        window.location.href="homepage.html";
+    }
+    else {
+        $.ajax(
+            url + "api/revise_user_info", {
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                token: token,
+                sex: ssex,
+                hobby: hobby,
+                birth_date: birthDate
+            },
+            success: function(data) {
+                // console.log(data);
+                location.reload();
             },
             error: function (error) {
                 const resData = error.responseJSON.message;

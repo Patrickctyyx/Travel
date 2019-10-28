@@ -30,9 +30,8 @@ function registcheck() {
 		$("#repwd").css("display","none");
 	}
 	if (birthDate != '' && birthDate != undefined && birthDate != null) {
-		if (!birthDate.match(/^[0-9]{4}\-[0-9]{1,2}$/)) {
+		if (!birthDate.match(/^[0-9]{4}-[0-9]{1,2}$/)) {
 			$("#day").css("display","inline-block");
-			$("#day").html("日期格式不正确");
 			$("form").find("input[name=day]").focus();
 			return false;
 		}
