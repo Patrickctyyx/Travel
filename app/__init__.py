@@ -8,6 +8,7 @@ from app.rest.user.user_info import UserInfoApi
 from app.rest.user.login import LoginApi
 from app.rest.user.logout import LogoutApi
 from app.rest.user.register import RegisterApi
+from app.rest.user.revise_user_info import ReviseUserInfoApi
 from app.rest.email.bind_email import BindEmailApi
 from app.rest.email.confirm_email import ConfirmEmailApi
 from app.rest.password.change_password import ChangePasswordApi
@@ -88,6 +89,10 @@ def create_app(object_name):
     rest_api.add_resource(
         ForgetPasswordApi,
         '/api/forget_password'
+    )
+    rest_api.add_resource(
+        ReviseUserInfoApi,
+        '/api/revise_user_info'
     )
     rest_api.init_app(app)
 

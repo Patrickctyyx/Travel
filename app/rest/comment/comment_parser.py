@@ -9,7 +9,7 @@ comment_post_parser.add_argument(
 comment_post_parser.add_argument(
     'article_id',
     type=str,
-    required=True
+    required=False
 )
 comment_post_parser.add_argument(
     'content',

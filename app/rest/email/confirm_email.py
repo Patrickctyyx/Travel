@@ -24,7 +24,7 @@ class ConfirmEmailApi(Resource):
             raise InvalidToken()
 
         if user.confirmed:
-            raise DuplicateInfo('邮箱已确认')
+            raise DuplicateInfo('邮箱已绑定')
 
         if user.confirm(args['verify_token']):
             return {'message': '邮箱绑定成功'}, 200

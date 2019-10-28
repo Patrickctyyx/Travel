@@ -1,4 +1,3 @@
-from flask import g
 from flask_restful import Resource
 from .register_parser import register_post_parser
 from app.models import db, User
@@ -25,7 +24,5 @@ class RegisterApi(Resource):
         db.session.add(user)
         db.session.commit()
         token = user.generate_auth_token().decode()
-
-        g.current_user = user
 
         return {'token': token}, 200

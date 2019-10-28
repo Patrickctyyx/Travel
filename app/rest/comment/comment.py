@@ -12,6 +12,7 @@ from app.errors import (
 class CommentApi(Resource):
 
     def get(self, comment_id=None):
+        # todo 返回所有评论
         if not comment_id:
             raise LackOfInfo('评论 id')
 

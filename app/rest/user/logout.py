@@ -1,5 +1,4 @@
 import uuid
-from flask import g
 from flask_restful import Resource, reqparse
 from app.models import User, db
 from app.errors import InvalidToken
@@ -25,7 +24,5 @@ class LogoutApi(Resource):
         user.uid = str(uuid.uuid4())
         db.session.add(user)
         db.session.commit()
-
-        g.current_user = None
 
         return {'message': 'ok'}, 200

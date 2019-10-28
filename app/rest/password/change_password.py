@@ -30,7 +30,7 @@ class ChangePasswordApi(Resource):
             raise InvalidToken()
 
         if not user.verify_password(args['old_password']):
-            raise WrongInfo('用户名或者密码错误')
+            raise WrongInfo('密码错误')
 
         user.password = args['new_password']
         db.session.add(user)
