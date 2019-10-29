@@ -25,7 +25,7 @@ function changePasswordHandler() {
     }
     else {
         $.ajax(
-            url_user + "api/change_password", {
+            url_password + "api/change_password", {
             method: 'POST',
             dataType: 'json',
             data: {

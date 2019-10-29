@@ -18,3 +18,20 @@ function homepageLoaded() {
         }
     }
 }
+
+
+function checkEmail(email) {
+    const regex = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;
+    return email.match(regex)
+}
+
+
+function checkBirthDate(birthDate) {
+    return birthDate.match(/^[0-9]{4}-[0-9]{1,2}$/)
+}
+
+
+function checkPassword(password) {
+    return password.match(/^[a-zA-Z0-9\.\_]{9,16}$/)
+}
+

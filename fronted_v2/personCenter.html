@@ -6,6 +6,8 @@
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/user_handlers.js"></script>
     <script type="text/javascript" src="js/password_handlers.js"></script>
+    <script type="text/javascript" src="js/email_handlers.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/personCenter.css">
 </head>
@@ -52,9 +54,12 @@
 								<div class="right_top"><h3>绑定邮箱</h3></div>
 								<div class="right_top1">
 									<form method="post" action="">
-										<div class="info"><span>邮箱：</span><input type="text" /></div>      
-										<div class="info"><span>Token：</span><input type="text"  /></div>
-										<div class="info"><input type="button" value="提交" class="btn btn-default ook" /><input type="button" value="获取token" class="btn btn-default ook" /></div>
+										<div class="info"><span>邮箱：</span><input type="text" id="emailToBind" /></div>
+										<div class="info"><span>Token：</span><input type="text" id="emailToken" /></div>
+										<div class="info">
+                                            <input value="提交" class="btn btn-default ook" onclick="confirmEmail()" />
+                                            <input value="获取 Token" class="btn btn-default ook" onclick="bindEmail()" />
+                                        </div>
                 					</form>
 								</div>
 							</div>
