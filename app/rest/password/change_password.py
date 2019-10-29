@@ -15,7 +15,7 @@ class ChangePasswordApi(Resource):
         )
         verify_post_parser.add_argument(
             'old_password',
-            type=password_type,
+            type=str,
             required=True
         )
         verify_post_parser.add_argument(
