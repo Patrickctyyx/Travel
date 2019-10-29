@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>红色记忆</title>
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/user_handlers.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
@@ -39,13 +40,13 @@
       </nav>
     <div class="main_middle">          
           <div>
-              <iframe  src="index.html" name="main_choice" scrolling="yes" frameborder="0" ></iframe>
+              <iframe src="index.html" name="main_choice" scrolling="yes" frameborder="0" ></iframe>
           </div>
     </div>
 
   </div>
 <script type="text/javascript">
-    homepageLoaded()
+    homepageLoaded();
     $('.nav_menu_li').click(function(){        
          $('.nav_menu_li').children("a").css({"background":"#E6D4C0","color":"black"});
          $(this).children("a").css({"background":"indianred","color":"#fff"});

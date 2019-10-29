@@ -32,6 +32,6 @@ class AvatarApi(Resource):
 
             user.avatar_url = img_url
             db.session.add(user)
-            db.session.commit(user)
+            db.session.commit()
 
-            return {'message': 'ok'}, 200
+            return {'avatar_url': img_url}, 200

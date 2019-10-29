@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>People</title>
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/user_handlers.js"></script>
+    <script type="text/javascript" src="js/password_handlers.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/personCenter.css">
 </head>
@@ -13,7 +14,8 @@
 		<div class="people_left">
 			<div class="people_left_top" id="avatarAndName">
 				<a href="#" title="点击更换头像">
-                    <img src="imgs/nav_user.jpg" class="img-thumbnail img-circle">
+                    <input type="file" name="image" id="uploadFile" style="display:none;">
+                    <img src="imgs/nav_user.jpg" class="img-thumbnail img-circle" onclick="uploadAvatarHandler()">
                 </a><br>
 				<span>包子_</span>
 			</div>
@@ -63,11 +65,10 @@
 								<div class="right_top"><h3>修改密码</h3></div>
 								<div class="right_top1">
 									<form method="post" action="">
-										<div class="info"><span>原始密码：</span><input type="text" /></div>
-										<div class="info"><span>新密码：</span><input type="text" placeholder="请输入九到十六位有效密码" /></div>
-										<div class="info"><span>确认新密码：</span><input type="text" placeholder="请再次确认新密码" /></div>
-										<div class="info"><span>Token：</span><input type="text"  /></div>
-										<div class="info"><input type="button" value="提交" class="btn btn-default ook" /><input type="button" value="获取token" class="btn btn-default ook" /></div>
+										<div class="info"><span>原始密码：</span><input type="text" id="changeOldPassword" /></div>
+										<div class="info"><span>新密码：</span><input type="text" placeholder="请输入九到十六位有效密码" id="changeNewPassword" /></div>
+										<div class="info"><span>确认新密码：</span><input type="text" placeholder="请再次确认新密码" id="changeNewPassword" /></div>
+										<div class="info"><input value="提交" class="btn btn-default ook" onclick="changePasswordHandler()" /></div>
                 					</form>
 								</div>
 							</div>

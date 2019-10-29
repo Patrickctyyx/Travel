@@ -18,4 +18,4 @@ class LoginApi(Resource):
 
         token = user.generate_auth_token().decode()
 
-        return {'token': token}, 200
+        return {'token': token, 'avatar_url': user.avatar_url}, 200
