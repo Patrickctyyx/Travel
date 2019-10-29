@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/template-web.js"></script>
+</head>
+<body>
+    <div id="person"></div>
+</body>
+<script type="text/html" id="personTemp">
+// 写法一
+{{each data}}
+<li>{{$index}}索引 我叫{{$value.name}}，今年{{$value.age}}岁，{{$value.marry}}</li>
+{{/each}}
+
+//写法二
+{{each data item index}}
+<li>{{index}}索引 我叫{{item.name}}，今年{{item.age}}岁，{{item.marry}}</li>
+{{/each}}
+</script>
+<script>
+const res = [
+{"name":"小明", "age":16, "marry":"单身"},
+{"name":"小花","age":15, "marry":"有男朋友"},
+{"name":"小胖","age":15, "marry":"有女朋友"},
+{"name":"小丽","age":15, "marry":"单身"}
+];
+document.getElementById('person').innerHTML = template('personTemp', {data:res}); // 其实这里是把数组转为对象的形式传进的
+</script>
+</html>

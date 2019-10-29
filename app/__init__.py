@@ -3,6 +3,7 @@ from app.config import config
 from app.models import db, photos
 from app.emails import mail
 from app.rest.comment.comment import CommentApi
+from app.rest.comment.all_comments import AllCommentsApi
 from app.rest.user.upload_avatar import AvatarApi
 from app.rest.user.user_info import UserInfoApi
 from app.rest.user.login import LoginApi
@@ -48,6 +49,10 @@ def create_app(object_name):
         CommentApi,
         '/api/comment',
         '/api/comment/<int:comment_id>'
+    )
+    rest_api.add_resource(
+        AllCommentsApi,
+        '/api/all_comments'
     )
     rest_api.add_resource(
         RegisterApi,
