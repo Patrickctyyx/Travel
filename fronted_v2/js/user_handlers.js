@@ -3,13 +3,13 @@ const url_user = "http://localhost:5000/";
 function registerHandler() {
 	const sname = $("input[name=name]").val().replace(/(^\s*)|(\s*$)/g, '');
 	const spwd = $("input[name=pwd]").val().replace(/(^\s*)|(\s*$)/g, '');
-	const sex = $("input[name=sex]").val().replace(/(^\s*)|(\s*$)/g, '');
+	const sex = $("input[name=sex]:checked").val().replace(/(^\s*)|(\s*$)/g, '');
 	let ssex;
-	if (sex === 0) {
-	    ssex = '男';
+	if (sex == 0) {
+	    ssex = '女';
     }
 	else {
-	    ssex = '女';
+	    ssex = '男';
     }
 	const birthDate = $("input[name=day]").val().replace(/(^\s*)|(\s*$)/g, '');
 	const hobby = $("input[name=hobby]").val().replace(/(^\s*)|(\s*$)/g, '');

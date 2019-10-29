@@ -29,8 +29,11 @@ function bindEmail() {
                 const resData = error.responseJSON;
                 alert(JSON.stringify(resData.message));
                 console.log(error);
-                localStorage.clear();
-                parent.location.href="userLogin.html";
+
+                if (resData.errcode == 2) {
+                    localStorage.clear();
+                    parent.location.href="userLogin.html";
+                }
             }
         });
     }
