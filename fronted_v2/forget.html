@@ -6,6 +6,8 @@
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/personCenter.css">
+    <script type="text/javascript" src="js/password_handlers.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
 </head>
 <body>
 	<div class="people_container">
@@ -16,11 +18,13 @@
 					<div class="right_top"><h3>忘记密码</h3></div>
 					<div class="right_top1" style="left: 180px;">
 						<form method="post" action="">
-							<div class="info"><span>用户名：</span><input type="text" /></div>      
-							<div class="info"><span>邮箱：</span><input type="text"  /></div>
-							<div class="info"><span>Token：</span><input type="text"  /></div>
-							<div class="info"><input type="button" value="提交" class="btn btn-default ook" />
-							<input type="button" value="获取token" class="btn btn-default ook" /></div>
+							<div class="info"><span>用户名：</span><input type="text" id="nicknameForget" /></div>
+							<div class="info"><span>邮箱：</span><input type="text" id="emailForget" /></div>
+							<div class="info"><span>Token：</span><input type="text" id="tokenForget" /></div>
+                            <div class="info"><span>新密码：</span><input type="password" id="passwordForget1" /></div>
+                            <div class="info"><span>确认新密码：</span><input type="password" id="passwordForget2" /></div>
+							<div class="info"><input type="button" value="提交" class="btn btn-default ook" onclick="forgetPasswordHandler()" />
+							<input type="button" value="获取 Token" class="btn btn-default ook" onclick="sendForgetToken()" /></div>
                 		</form>
 					</div>
 					</div>

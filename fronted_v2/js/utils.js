@@ -21,6 +21,10 @@ function homepageLoaded() {
 
 
 function checkEmail(email) {
+    if (email == '' || email == null) {
+        alert('邮箱不能为空');
+        return false
+    }
     const regex = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;
     return email.match(regex)
 }

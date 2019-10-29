@@ -21,7 +21,7 @@ class SendVerifyEmailApi(Resource):
         args = verify_post_parser.parse_args()
 
         user = User.query.filter_by(nickname=args['nickname']).first()
-        if not user.email or user.email != args['email']:
+        if not user or not user.email or user.email != args['email']:
             raise WrongInfo('邮箱或用户名错误')
 
         verify_token = Verify.generate_confirmation_token(
