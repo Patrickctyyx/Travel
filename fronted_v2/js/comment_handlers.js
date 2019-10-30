@@ -1,4 +1,4 @@
-const url_comment = "http://localhost:5000/";
+const url_comment = "http://139.155.89.156/";
 
 
 function commentPostHandler() {

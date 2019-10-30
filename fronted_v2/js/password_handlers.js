@@ -1,4 +1,4 @@
-const url_password = "http://localhost:5000/";
+const url_password = "http://139.155.89.156/";
 
 function sendForgetToken() {
     const nickname = $('#nicknameForget').val().replace(/(^\s*)|(\s*$)/g, '');

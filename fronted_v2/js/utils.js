@@ -1,5 +1,4 @@
-const url = "http://localhost:5000/";
-
+const url = "http://139.155.89.156/";
 
 function homepageLoaded() {
     const token = localStorage.getItem('token');

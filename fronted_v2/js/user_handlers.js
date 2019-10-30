@@ -1,4 +1,4 @@
-const url_user = "http://localhost:5000/";
+const url_user = "http://139.155.89.156/";
 
 function registerHandler() {
 	const sname = $("input[name=name]").val().replace(/(^\s*)|(\s*$)/g, '');
