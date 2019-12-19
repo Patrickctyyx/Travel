@@ -51,6 +51,10 @@ python mange.py server
 ## 运行截图
 - 首页
 ![image](https://github.com/Patrickctyyx/Travel/blob/master/posts/homepage.png)
+- 登录
+![image](https://github.com/Patrickctyyx/Travel/blob/master/posts/login.png)
+- 注册
+![image](https://github.com/Patrickctyyx/Travel/blob/master/posts/register.png)
 - 景点介绍
 ![image](https://github.com/Patrickctyyx/Travel/blob/master/posts/introduction.png)
 - 参观指南
